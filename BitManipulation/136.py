@@ -4,3 +4,5 @@ class Solution:
         for item in nums:
             res = res ^ item
         return res
+
+# return sum(set(nums))*2 - sum(nums)
