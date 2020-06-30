@@ -9,17 +9,15 @@ class Solution:
                 total += pile//piles[i] + (pile%piles[i]>0)
             if total < H:
                 break
-        j = piles[i]
-        print(j)
-        while j > 0:
-            print(j)
+
+        l,h = 1,piles[i]
+        while l<h:
+            m = (l+h)//2
             total = 0
             for pile in piles:
-                total += pile//j + (pile%j>0)
-            if total > H:
-                break
-            j -= 1
-        return j+1
-
-test = Solution()
-test.minEatingSpeed([312884470],312884469)
+                total += pile//m + (pile%m>0)
+            if total <= H:
+                h = m
+            else:
+                l = m+1
+        return l
