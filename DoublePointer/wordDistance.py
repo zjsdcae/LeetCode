@@ -11,6 +11,9 @@ class Solution:
                     if j == length-1:
                         break
                     j += 1
+            else:
+                i += 1
+                continue
             if words[j] not in matchWord and j == length-1:
                 return dis
             elif words[j] in matchWord and words[i] in matchWord:
@@ -20,4 +23,4 @@ class Solution:
                     if j - i < dis :
                         dis = j - i
                     i = j
-        return res
+        return dis
