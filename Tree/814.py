@@ -10,7 +10,7 @@ class Solution:
         def judge(node):
             if node == None:
                 return False
-            if node.val == 1:return True
+            if node.val == 1: return True
             else: 
                 if node.left or node.right:
                     return False or judge(node.left) or judge(node.right)
